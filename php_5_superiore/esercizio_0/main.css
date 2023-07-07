@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;400&family=Staatliches&display=swap');
+
+:root {
+    --sfondo: #5358A9;
+    --testo: #FDFCFA;
+    --gray-out: #ABB2BF;
+    --blu: #4087ee;
+    --ombra: rgba(0, 0, 0, 0.8);
+    --nero: #0F0F0F;
+    --verde: #98C379;
+    --rosso: #E06C75;
+}
+
+@font-face {
+    font-family: open-sans;
+    src: url("./fonts/open-sans.ttf");
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+* {
+    font-family: open-sans;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--sfondo);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.card {
+    margin: auto;
+    background-color: white;
+    width: 25%;
+    min-width: 350px;
+    height: 500px;
+    margin-top: 200px;
+    z-index: 1;
+    border-radius: 30px;
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 20px 50px var(--ombra);
+}
+
+.titolo {
+    color: var(--nero);
+    font-weight: lighter;
+    font-size: 28px;
+    font-family: 'Staatliches', cursive;
+}
+
+form {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    margin-top: 40px;
+}
+
+.input {
+    display: block;
+    width: 300px;
+    height: 40px;
+    border-radius: 4px;
+    font-size: 1rem;
+    border: solid 1.5px black;
+    margin-bottom: 20px;
+    background: none;
+    padding: 5px;
+}
+
+.input:valid {
+    border: 2.5px solid var(--verde);
+}
+
+.input:focus {
+    outline-color: var(--blu);
+}
+
+.buttons {
+    background-color: var(--blu);
+    color: var(--testo);
+    width: 300px;
+    height: 34px;
+    border-radius: 6px;
+    border: none;
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 10px;
+}
+
+p {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.risultato {
+    font-size: 24px;
+}
+
+.contatore-lunghezza-stringa {
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+}
